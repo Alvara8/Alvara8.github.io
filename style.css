@@ -1,27 +1,25 @@
 * {
   margin: 0%;
   padding: 0;
-}
+border: 0;}
 
 body {
-  background-color: black;
+  background-color: #031e2a	;
 }
 
 
 #header {
   display: flex;
   justify-content: flex-end;
-  border: 4px solid red;
   height: 5vh;
   width: 100%;
-  background-color: grey;
 }
 
 #header a {
+  padding-top: 20px;
   color: white;
   font-size: 25px;
   text-decoration: none;
-  border: 4px solid red;
   margin-right: 2%;
 }
 
@@ -36,7 +34,6 @@ body {
 
 /*-------------------------------------main header code-------------------------------------*/
 .mainHeader{
-border: 4px solid red;
 width: 100%;
 height: 95vh;
 display:flex;
@@ -116,5 +113,46 @@ color:white;
   width: 100%;
   height:100vh;
   color: white;
-  
+  display:flex;
+  flex-direction: column;
+
+  }
+
+
+  #ContactHeading{
+    border: 4px solid red;
+    width:100%;
+    height:15vh;
+    
+    display:flex;
+    align-items: center;
+    justify-content: center;
+   
+
+  }
+
+
+  #ContactForm{
+    border: 4px solid red;
+    width:100%;
+    height:70vh;
+
+  }
+
+  #Footer{
+    border: 4px solid red;
+    width:100%;
+    height:15vh;
+
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  #Footer img{
+    border: 4px solid red;
+    width: 75px;  
+    margin: 25px;
+
   }
