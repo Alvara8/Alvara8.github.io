@@ -143,12 +143,14 @@ color:white;
   
   #ContactForm form{
     border: 4px solid red;
+
+    background-color: #474a4b;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;   
-     width: 50%;
-    height: 80%;
+     width: 30%;
+    height: 85%;
     border-radius: 15px;
   }
 
@@ -176,9 +178,7 @@ color:white;
    font-size: 25px;
   }
 
-/*----------------------Form css---------------------------*/
-
-
+/*----------------------Footer css---------------------------*/
   #Footer{
     border: 4px solid red;
     width:100%;
@@ -187,12 +187,66 @@ color:white;
     display:flex;
     align-items: center;
     justify-content: center;
-
   }
-
   #Footer img{
     border: 4px solid red;
     width: 75px;  
     margin: 25px;
+  }
+  #Footer a:hover{
+   height: 150%;
 
   }
+/*--------------------Navigation css------------------------*/
+
+.dropdown{
+  display: inline-block;
+}
+.dropdown button{
+padding: 10px 15px;
+border: none;
+cursor: pointer;
+appearance: none;
+background-color: inherit;
+}
+
+.dropdown img{
+height: 25px;
+}
+
+.dropdown a{
+display: block;
+color:red;
+text-decoration: none;
+padding: 10px 15px;
+}
+
+.dropdown .content{
+  display: none;
+  position: absolute;
+  background-color: blue;
+  box-shadow: 2px 2px 5px black;
+}
+
+.dropdown:hover .content{
+display: block;
+}
+
+.dropdown a:hover{
+background-color: rgba(255, 0, 0, 0.594);
+}
+
+.navbar {
+  padding: 15px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  display: none;
+}
+
+.navbar.transparent{
+display: flex;
+justify-content: flex-end;
+
+}

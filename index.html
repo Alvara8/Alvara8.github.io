@@ -4,17 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Home</title>
+    <title>Portfolio</title>
     <link rel="stylesheet" href="style.css">
-
     <link rel="icon" type="images/x-icon" href="ClemsonLogo.png" />
 </head>
 
-
-
-
 <body>
+  <div class="navbar" id="navbar">  
+    <div class="dropdown">
+       <button> <img src="hamburger.png" alt="Hamburger" border="0"> </button>
+       <div class="content">
+           <a href="#header">Home</a>
+           <a href="#About">About</a>
+           <a href="#Project">Project</a>
+           <a href="#Contact">Contact</a>
+       </div>
+    </div>
+</div>
 
+
+  <!----------------------Navigation-------------------------------->
+  
            <div id="header">  
             <a href="#header"> Home </a>
             <a href="#About"> About </a>
@@ -22,7 +32,6 @@
             <a href="#Contact">Contact</a>  
            </div>
          
-
 
 
            <div class="mainHeader">
@@ -66,13 +75,7 @@ Project page
   </div>
 
 
-
-
     <div id="ContactForm">  
-
-
-
-
 
   <form action="https://api.web3forms.com/submit" method="POST">
       <input type="hidden" name="access_key" value="63a567b4-82f5-4dca-9312-6c3a65a7d109">
@@ -87,30 +90,31 @@ Project page
 
     </div>
 
+<!-----------------------------------Footer-------------------------------------------->
 
 
     <div id="Footer">
-      <img src="linkedin-Logo.png" alt="Linkedin-Logo-Link">
-      <img src="Email-Logo.png" alt="Email-logo-Link">
-      <img src="Github-Logo.png" alt="Linkedin-Logo">
+
+      <a href="https://www.linkedin.com/in/jared-alvarado-64507825a" target="_blank"> <img src="linkedin-Logo.png" alt="Linkedin-Logo-Link"></a>
+      <a href="mailto: alvara8@clemson.edu" target="_blank"> <img src="Email-Logo.png" alt="Email-logo-Link"> </a>
+      <a href="https://github.com/Alvara8" target="_blank"> <img src="Github-Logo.png" alt="Linkedin-Logo"> </a>
+
     </div>
-
-
-
-
-
-
-    
-
-<!--           <a href="https://www.linkedin.com/in/jared-alvarado-64507825a"><img src="linkedin-logo.png"></a>-->
-
 
 </div>
 
   <!-----------------------------------EndOfFile-------------------------------------------->
-  
-
-
+     
+  <script>
+    window.onscroll = function() {
+        var navbar = document.getElementById("navbar");
+        if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+            navbar.classList.add("transparent");
+        } else {
+            navbar.classList.remove("transparent");
+        }
+    };
+</script>
 
 
 </body>
