@@ -130,12 +130,46 @@ text-align: center;
 }
 
 
+#ExampleHeader{
+height: 5vh;
+}
+
+
+
+#explain{
+  width: 100%;
+  height:15vh;
+  display: flex;
+}
+
+
+
+#Examples{
+
+  border: 4px solid red;
+  width: 100%;
+  height:60vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content:space-evenly;
+}
+
+#Examples img{
+  height: 70%;
+  max-width: 25%;
+  border-radius: 5px;
+  margin-top: 2%;
+}
+
+#ExampleSkills{
+  height: 5vh;
+}
 
 
 #Skills{
   border: 4px solid red;
   width: 100%;
-  height:20vh;
+  height:15vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -143,18 +177,13 @@ text-align: center;
 
 #Skills img{
   border: 4px solid red;
-  height: 40%;
+  height: 60%;
   margin: 3%;
-  margin-bottom: 8%;
 }
-
-
-
 
 /*-------------------------------------Contact code-------------------------------------*/
 
 #Contact{
-  border: 4px solid red;
   width: 100%;
   height:100vh;
   color: white;
@@ -165,7 +194,6 @@ text-align: center;
 
 
   #ContactHeading{
-    border: 4px solid red;
     width:100%;
     height:15vh;
    font-size: 200%;
@@ -176,7 +204,6 @@ text-align: center;
 
 /*----------------------Form css---------------------------*/
   #ContactForm{
-    border: 4px solid red;
     width:100%;
     height:70vh;
     display: flex;
@@ -185,7 +212,6 @@ text-align: center;
   }
   
   #ContactForm form{
-    border: 4px solid red;
     background-color:  #04151d;
     display: flex;
     flex-direction: column;
@@ -261,7 +287,6 @@ text-align: center;
 
 /*----------------------Footer css---------------------------*/
   #Footer{
-    border: 4px solid red;
     width:100%;
     height:15vh;
 
@@ -270,10 +295,10 @@ text-align: center;
     justify-content: center;
   }
   #Footer img{
-    border: 4px solid red;
-    width: 75px;  
+    width: 60px;
     margin: 25px;
   }
+
   #Footer a:hover{
    height: 150%;
 
@@ -332,5 +357,78 @@ display: block;
 .navbar.transparent{
 display: flex;
 justify-content: flex-end;
+
+}
+
+/*-------------------Media CSS------------------------*/
+
+
+@media screen and (max-width: 600px) {
+
+
+
+
+  #Project{
+    border: 4px solid red;
+    width: 100%;
+    height:100vh;
+    color:white;
+    text-align: center;
+    }
+    
+    
+    #ExampleHeader{
+    height: 5vh;
+    }
+    
+    
+    
+    #explain{
+      width: 100%;
+      height:15vh;
+      display: flex;
+    }
+    
+    
+    
+    #Examples{
+    
+      border: 4px solid red;
+      width: 100%;
+      height:60vh;
+      display: flex;
+      align-items: flex-start;
+      justify-content:space-evenly;
+    }
+    
+    #Examples img{
+      height: 70%;
+      max-width: 25%;
+      border-radius: 5px;
+      margin-top: 2%;
+    }
+    
+    #ExampleSkills{
+      height: 5vh;
+    }
+    
+    
+    #Skills{
+      border: 4px solid red;
+      width: 100%;
+      height:15vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    #Skills img{
+      border: 4px solid red;
+      height: 60%;
+      margin: 3%;
+    }
+
+
+
 
 }
