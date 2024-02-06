@@ -5,6 +5,7 @@ box-sizing: border-box;}
 
 body {
   background-color: rgb(0, 0, 0)	;
+  
 }
 
 
@@ -14,7 +15,6 @@ body {
   height: 5vh;
   width: 100%;
   border: 4px solid red;
-
 }
 
 #header a {
@@ -36,8 +36,16 @@ body {
 
 /*-------------------------------------main header code-------------------------------------*/
 .mainHeader{
-  border: 4px solid red;
 
+  background-image: url(images/webpage.gif);
+  background-size: cover;
+
+
+
+
+
+
+border: 4px solid red;
 width: 100%;
 height: 95vh;
 display:flex;
@@ -45,7 +53,6 @@ flex-direction: column;
 align-items: flex-start;
 justify-content: center;
 flex-wrap: wrap;
-
 color: white;
 
 }
@@ -66,13 +73,12 @@ color: white;
   }
 
 .mainHeader button{
-  
 cursor: pointer;
-
 height: 5em;
 width: 7em;
 border-radius: 5em;
 border: none;
+margin-left: 100%;
 }
 
 .mainHeader button:hover{
@@ -88,16 +94,17 @@ border: none;
 #About{
   width: 100%;
   height: 100vh;
-  border: 4px solid red;
-
   display: flex;
   flex-direction: row;
   color:white;
+  background-color: #F4F3F2;
 }
 
 
 #About #picture img{ 
-width: 400px;
+width: 80%;
+height: auto;
+border-radius: 5px;
 }
 
 #picture{
@@ -122,11 +129,11 @@ width: 400px;
 
 
 #Project{
-border: 4px solid red;
 width: 100%;
 height:100vh;
 color:white;
 text-align: center;
+background-color: hsla(212, 60%, 10%, 0.904);
 }
 
 
@@ -134,40 +141,85 @@ text-align: center;
 height: 5vh;
 }
 
-
-
-#explain{
-  width: 100%;
-  height:15vh;
-  display: flex;
-}
-
-
-
 #Examples{
-
-  border: 4px solid red;
   width: 100%;
-  height:60vh;
+  height:75vh;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content:space-evenly;
 }
 
-#Examples img{
-  height: 70%;
-  max-width: 25%;
-  border-radius: 5px;
-  margin-top: 2%;
+
+
+
+
+/*---------------------------------------------------pop up------------------------------------------------------------*/
+
+.popup-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
 }
+
+.popup-content {
+  display: flex;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  height: 40%;
+  width: 40%;
+}
+
+.popup-container button{
+  margin: 3%;
+  height: 15%;
+  width: 15%;
+  cursor: pointer;
+
+}
+
+
+
+
+.show-popup {
+  display: flex;
+}
+
+.popup-button {
+  display: inline-block;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  width: 20%; 
+
+}
+
+.popup-button img {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 5px; /* Optional: Add border-radius for rounded corners */
+}
+
+
 
 #ExampleSkills{
   height: 5vh;
 }
 
-
 #Skills{
-  border: 4px solid red;
   width: 100%;
   height:15vh;
   display: flex;
@@ -176,10 +228,36 @@ height: 5vh;
 }
 
 #Skills img{
-  border: 4px solid red;
   height: 60%;
   margin: 3%;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*-------------------------------------Contact code-------------------------------------*/
 
@@ -363,72 +441,6 @@ justify-content: flex-end;
 /*-------------------Media CSS------------------------*/
 
 
-@media screen and (max-width: 600px) {
 
 
 
-
-  #Project{
-    border: 4px solid red;
-    width: 100%;
-    height:100vh;
-    color:white;
-    text-align: center;
-    }
-    
-    
-    #ExampleHeader{
-    height: 5vh;
-    }
-    
-    
-    
-    #explain{
-      width: 100%;
-      height:15vh;
-      display: flex;
-    }
-    
-    
-    
-    #Examples{
-    
-      border: 4px solid red;
-      width: 100%;
-      height:60vh;
-      display: flex;
-      align-items: flex-start;
-      justify-content:space-evenly;
-    }
-    
-    #Examples img{
-      height: 70%;
-      max-width: 25%;
-      border-radius: 5px;
-      margin-top: 2%;
-    }
-    
-    #ExampleSkills{
-      height: 5vh;
-    }
-    
-    
-    #Skills{
-      border: 4px solid red;
-      width: 100%;
-      height:15vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    
-    #Skills img{
-      border: 4px solid red;
-      height: 60%;
-      margin: 3%;
-    }
-
-
-
-
-}

@@ -50,44 +50,66 @@
 
 
            <div id="About">
-            <div id="picture"> <img src="Photo on 1-14-24 at 9.14 PM.jpg" alt="Picture of me"></div>
+            <div id="picture"> <img src="images/IMG_6796.JPG" alt="Picture of me"></div>
             <div id="text">Hello my name is Jared</div>
            </div>
 
 
-<!-----------------------------------Project-------------------------------------------->
+<!-----------------------------------Project -------------------------------------------->
 
           
 <div id="Project">                
 
 
-<h1 id="ExampleHeader">Projects</h1>
+<h1 id="ExampleHeader">Projects - Click for info!</h1>
+
+
 
 
 
 
 <div id="Examples">
-  <img src="images/caeser-example.png" alt="caeser-example"> <img src="images/Quiddler-Example.png" alt="Quiddler-Example"> 
-  <img src="images/Connect4-example1.png" alt="Connect4-example1"> <img src="images/Connect4-example2.png" alt="Connect4-example2"> 
+  <button class="popup-button" onclick="togglePopup('popup1')"><img src="images/caeser-example.png" alt="caeser-example" border="0"></button>
+  <button class="popup-button" onclick="togglePopup('popup2')"> <img src="images/Quiddler-Example.png" alt="Quiddler-Example"> </button>
+  <button class="popup-button" onclick="togglePopup('popup3')"> <img src="images/Connect4-example1.png" alt="Connect4-example1"></button>
+  <button class="popup-button" onclick="togglePopup('popup3')"> <img src="images/Connect4-example2.png" alt="Connect4-example2"></button>
+  
 </div>  
 
-<div id="explain">
-  <p> Caesar cipher encryption technique created by Julius Caesar in an effort to protect classified documents. It works
-    by shifting each letter of the message "x" amount of places from its position in the alphabet. This program has a
-    take of Caesar cipher using a key that changes the amount each character is shifted per iteration. It is capable of
-    encrypting messages as well as decrypting messages that it has encrypted.</p>
-  
-    <p> Quiddler is a popular card game where one has a deck of cards comprised of one to two letter each and must use them to
-      create a word. The score is calculated based on what letters you used to create the word. Quiddler helper was created as
-      an aid to Quiddler</p>
-  
-      <p> Collaborated with a team to develop an expandable connect four game.
-         Supports a board up to 100 x100 and up to 10 players.
-         Developed two variations of the game, one being memory efficient and one time.
-         Implemented an interface to efficient code off of.
-         Created 40 test cases to test the various functions and functionality of the ga</p>
-         
+<div class="popup-container" id="popup1">
+
+  <div class="popup-content">
+    <p>Caesar cipher was a encryption technique created by Julius Caesar in an effort to protect classified documents. It works by shifting each letter of the message "x" 
+      amount of places from its position in the alphabet. This program has a take of Caesar cipher using C++ with a key that changes the amount each character is shifted per 
+      iteration. It is capable of encrypting messages as well as decrypting messages that it has encrypted.</p>
+    <button onclick="togglePopup('popup1')">Close</button>
+  </div>
+
 </div>
+
+<div class="popup-container" id="popup2">
+  <div class="popup-content">
+    <p>Quiddler is a popular card game where one has a deck of cards comprised of one to two letter each and must use them to create a word. The score is calculated based on what 
+      letters you used to create the word. Quiddler helper was created as an aid to Quiddler players, it can calculate possible words to be created based on the input as well as 
+      how many points the word is worth. There are two variation to the game, one where it shows the vaule of the word and one where it does not.</p>
+    <button onclick="togglePopup('popup2')">Close</button>
+  </div>
+</div>
+
+<div class="popup-container" id="popup3">
+  <div class="popup-content">
+    <p>This is the content for Button 3.</p>
+    <button onclick="togglePopup('popup3')">Close</button>
+  </div>
+</div>
+
+
+
+
+
+
+
+
 
 
 
@@ -144,6 +166,13 @@
   <!-----------------------------------EndOfFile-------------------------------------------->
      
   <script>
+
+function togglePopup(popupId) {
+    const popup = document.getElementById(popupId);
+    popup.classList.toggle('show-popup');
+  }
+
+
     window.onscroll = function() {
         var navbar = document.getElementById("navbar");
         if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
@@ -152,9 +181,11 @@
             navbar.classList.remove("transparent");
         }
     };
+
+
+  
+
 </script>
-
-
 </body>
 
 </html>
