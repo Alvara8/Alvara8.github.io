@@ -2,207 +2,202 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width = device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="images/x-icon" href="images/ClemsonLogo.png" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width = device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="images/x-icon" href="images/ClemsonLogo.png" />
 </head>
 
 <body>
-  <div class="navbar" id="navbar">  
+
+  <div class="navbar" id="navbar">
     <div class="dropdown">
-       <button> <img src="images/hamburger.png" alt="Hamburger" border="0"> </button>
-       <div class="content">
-           <a href="#header">Home</a>
-           <a href="#About">About</a>
-           <a href="#Project">Project</a>
-           <a href="#Contact">Contact</a>
-       </div>
+      <button id="toggleButton" onclick="menuVisibility()"> <img src="images/hamburger.png" alt="Hamburger" border="0">
+      </button>
+      <div class="content">
+        <a href="#header">Home</a>
+        <a href="#About">About</a>
+        <a href="#Project">Project</a>
+        <a href="#Contact">Contact</a>
+      </div>
     </div>
-</div>
+  </div>
 
 
   <!----------------------Navigation-------------------------------->
-  
-           <div id="header">  
-            <a href="#header"> Home </a>
-            <a href="#About"> About </a>
-            <a href="#Project"> Projects </a>
-            <a href="#Contact">Contact</a>  
-           </div>
-         
 
-
-           <div class="mainHeader">
-           <h1> Hello, I'm <span style="color: #15aabf;"> Jared.</span> </h1>
-           <p> Computer Science Student with an interest in software development.</p>
-
-
-           <a href="CV.pdf" target="_blank" download="CV.pdf" ><button>Download CV</button></a>
-
-           </div>
-
-
-
-
-
-<!-----------------------------------About-------------------------------------------->
-
-
-           <div id="About">
-            <div id="picture"> <img src="images/IMG_6796.JPG" alt="Picture of me"></div>
-
-
-
-            <div id="text">
-              
-              <h1>About me</h1>
-              <p>Hello, thank you for taking the time to check out my Portfolio. My name is Jared, I am an aspiring software developer with a passion for
-                 web development. I graduated from Piedmont Technical College with an AS and am now pursuing a BS in Computer Science at Clemson University. 
-                 My main focus is learning to create more user friendly, functional, and aesthetic pleasing projects.</p>
-            
-            </div>
-
-
-
-           </div>
-
-
-<!-----------------------------------Project -------------------------------------------->
-
-          
-<div id="Project">                
-
-
-<h1 id="ExampleHeader">Projects <p>Click images for more info!</p></h1>
-
-
-
-
-
-
-<div id="Examples">
-  <button class="popup-button" onclick="togglePopup('popup1')"><img src="images/caeser-example.png" alt="caeser-example" border="0"></button>
-  <button class="popup-button" onclick="togglePopup('popup2')"> <img src="images/Quiddler-Example.png" alt="Quiddler-Example"> </button>
-  <button class="popup-button" onclick="togglePopup('popup3')"> <img src="images/Connect4-example1.png" alt="Connect4-example1"></button>
-  <button class="popup-button" onclick="togglePopup('popup3')"> <img src="images/Connect4-example2.png" alt="Connect4-example2"></button>
-  
-</div>  
-
-<div class="popup-container" id="popup1">
-  <div class="popup-content">
-    <p>Caesar cipher was a encryption technique created by Julius Caesar in an effort to protect classified documents. It works by shifting each letter of the message "x" 
-      amount of places from its position in the alphabet. This program has a take of Caesar cipher using C++ with a key that changes the amount each character is shifted per 
-      iteration. It is capable of encrypting messages as well as decrypting messages that it has encrypted.</p>
-    <button onclick="togglePopup('popup1')">Close</button>
+  <div id="header">
+    <a href="#header"> Home </a>
+    <a href="#About"> About </a>
+    <a href="#Project"> Projects </a>
+    <a href="#Contact">Contact</a>
   </div>
 
-</div>
 
-<div class="popup-container" id="popup2">
-  <div class="popup-content">
-    <p>Quiddler is a popular card game where one has a deck of cards comprised of one to two letter each and must use them to create a word. The score is calculated based on what 
-      letters you used to create the word. Quiddler helper was created as an aid to Quiddler players, it can calculate possible words to be created based on the input as well as 
-      how many points the word is worth. There are two variation to the game, one where it shows the value of the word and one where it does not.</p>
-    <button onclick="togglePopup('popup2')">Close</button>
+
+  <div class="mainHeader">
+    <h1> Hello, I'm <span style="color: #15aabf;"> Jared.</span> </h1>
+    <p> Computer Science Student with an interest in software development.</p>
+
+
+    <a href="CV.pdf" target="_blank" download="CV.pdf"><button>Download CV</button></a>
+
   </div>
-</div>
-
-<div class="popup-container" id="popup3">
-  <div class="popup-content">
-    <p>
-      I collaborated with a team to develop an expandable Connect Four game, which supports a board size of up to 100x100 and accommodates up to 10 players. We created 
-      two variations of the game, one optimized for memory efficiency and another for speed. Additionally, we implemented an interface to efficiently manage the 
-      codebase. To ensure the robustness of our implementation, we crafted 40 test cases to thoroughly assess the functionality and performance of the game across 
-      various scenarios.</p>
-    <button onclick="togglePopup('popup3')">Close</button>
-  </div>
-</div>
 
 
+  <!-----------------------------------About-------------------------------------------->
 
 
+  <div id="About">
+    <div id="picture"> <img src="images/IMG_6796.JPG" alt="Picture of me"></div>
 
+    <div id="text">
 
-
-
-
-
-
-
-
-
-
-
-<h1 id="ExampleSkills">Skills</h1>
-<div id="Skills">
-<img src="images/C++_logo.png" alt="C++_logo"> <img src="images/C_Logo.png" alt="C-logo"> 
-<img src="images/java-logo.png" alt="Java-logo"> <img src="images/html-logo.png" alt="HTML logo"> <img src="images/css-logo.png" alt="CSS logo">
-</div>
-
-</div>
-
-<!-----------------------------------Contact-------------------------------------------->
-       
-
-
-    
-<div id="Contact">
-  <h1 id="ContactHeading">
-    Contact me!
-  </h1>
-    <div id="ContactForm">  
-
-  <form action="https://api.web3forms.com/submit" method="POST">
-      <input type="hidden" name="access_key" value="63a567b4-82f5-4dca-9312-6c3a65a7d109">
-      <h4>Name</h4>
-      <input type="text" name="name" placeholder="Your Name" required>
-      <h4>Email</h4>
-      <input type="email" name="email" placeholder="Email" required>
-      <h4>Message</h4>
-      <textarea name="message" rows="6"  placeholder="Your message" required> </textarea>
-      <button type="submit">Send</button>
-      
+      <h1>About me</h1>
+      <p>Hello, thank you for taking the time to check out my Portfolio. My name is Jared, I am an aspiring software
+        developer with a passion for
+        web development. I graduated from Piedmont Technical College with an AS and am now pursuing a BS in Computer
+        Science at Clemson University.
+        My main focus is learning to create more user friendly, functional, and aesthetic pleasing projects.</p>
 
     </div>
 
-<!-----------------------------------Footer-------------------------------------------->
+  </div>
+
+
+  <!-----------------------------------Project -------------------------------------------->
+
+
+  <div id="Project">
+    <h1 id="ExampleHeader">Projects <p>Click images for more info!</p>
+    </h1>
+    <div id="Examples">
+      <button class="popup-button" onclick="togglePopup('popup1')"><img src="images/caeser-example.png"
+          alt="caeser-example" border="0"></button>
+      <button class="popup-button" onclick="togglePopup('popup2')"> <img src="images/Quiddler-Example.png"
+          alt="Quiddler-Example"> </button>
+      <button class="popup-button" onclick="togglePopup('popup3')"> <img src="images/Connect4-example1.png"
+          alt="Connect4-example1"></button>
+      <button class="popup-button" onclick="togglePopup('popup3')"> <img src="images/Connect4-example2.png"
+          alt="Connect4-example2"></button>
+    </div>
+
+    <div class="popup-container" id="popup1">
+      <div class="popup-content">
+        <p>Caesar cipher was a encryption technique created by Julius Caesar in an effort to protect classified
+          documents. It works by shifting each letter of the message "x"
+          amount of places from its position in the alphabet. This program has a take of Caesar cipher using C++ with a
+          key that changes the amount each character is shifted per
+          iteration. It is capable of encrypting messages as well as decrypting messages that it has encrypted.</p>
+        <button onclick="togglePopup('popup1')">Close</button>
+      </div>
+
+    </div>
+
+    <div class="popup-container" id="popup2">
+      <div class="popup-content">
+        <p>Quiddler is a popular card game where one has a deck of cards comprised of one to two letter each and must
+          use them to create a word. The score is calculated based on what
+          letters you used to create the word. Quiddler helper was created as an aid to Quiddler players, it can
+          calculate possible words to be created based on the input as well as
+          how many points the word is worth. There are two variation to the game, one where it shows the value of the
+          word and one where it does not.</p>
+        <button onclick="togglePopup('popup2')">Close</button>
+      </div>
+    </div>
+
+    <div class="popup-container" id="popup3">
+      <div class="popup-content">
+        <p>
+          I collaborated with a team to develop an expandable Connect Four game, which supports a board size of up to
+          100x100 and accommodates up to 10 players. We created
+          two variations of the game, one optimized for memory efficiency and another for speed. Additionally, we
+          implemented an interface to efficiently manage the
+          codebase. To ensure the robustness of our implementation, we crafted 40 test cases to thoroughly assess the
+          functionality and performance of the game across
+          various scenarios.</p>
+        <button onclick="togglePopup('popup3')">Close</button>
+      </div>
+    </div>
+    <h1 id="ExampleSkills">Skills</h1>
+    <div id="Skills">
+      <img src="images/C++_logo.png" alt="C++_logo"> <img src="images/C_Logo.png" alt="C-logo">
+      <img src="images/java-logo.png" alt="Java-logo"> <img src="images/html-logo.png" alt="HTML logo"> <img
+        src="images/css-logo.png" alt="CSS logo">
+    </div>
+
+  </div>
+
+  <!-----------------------------------Contact-------------------------------------------->
+
+
+
+
+  <div id="Contact">
+    <h1 id="ContactHeading">
+      Contact me!
+    </h1>
+    <div id="ContactForm">
+
+      <form action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="63a567b4-82f5-4dca-9312-6c3a65a7d109">
+        <h4>Name</h4>
+        <input type="text" name="name" placeholder="Your Name" required>
+        <h4>Email</h4>
+        <input type="email" name="email" placeholder="Email" required>
+        <h4>Message</h4>
+        <textarea name="message" rows="6" placeholder="Your message" required> </textarea>
+        <button type="submit">Send</button>
+
+
+    </div>
+
+    <!-----------------------------------Footer-------------------------------------------->
 
 
     <div id="Footer">
 
-      <a href="https://www.linkedin.com/in/jared-alvarado-64507825a" target="_blank"> <img src="images/linkedin-Logo.png" alt="Linkedin-Logo-Link"></a>
-      <a href="mailto: alvara8@clemson.edu" target="_blank"> <img src="images/Email-Logo.png" alt="Email-logo-Link"> </a>
+      <a href="https://www.linkedin.com/in/jared-alvarado-64507825a" target="_blank"> <img
+          src="images/linkedin-Logo.png" alt="Linkedin-Logo-Link"></a>
+      <a href="mailto: alvara8@clemson.edu" target="_blank"> <img src="images/Email-Logo.png" alt="Email-logo-Link">
+      </a>
       <a href="https://github.com/Alvara8" target="_blank"> <img src="images/Github-Logo.png" alt="Linkedin-Logo"> </a>
 
     </div>
 
-</div>
+  </div>
 
   <!-----------------------------------EndOfFile-------------------------------------------->
-     
+
   <script>
-
-function togglePopup(popupId) {
-    const popup = document.getElementById(popupId);
-    popup.classList.toggle('show-popup');
-  }
-
-
-    window.onscroll = function() {
-        var navbar = document.getElementById("navbar");
-        if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-            navbar.classList.add("transparent");
-        } else {
-            navbar.classList.remove("transparent");
-        }
+    function togglePopup(popupId) {
+      const popup = document.getElementById(popupId);
+      popup.classList.toggle('show-popup');
+    }
+    window.onscroll = function () {
+      var navbar = document.getElementById("navbar");
+      if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+        navbar.classList.add("transparent");
+      } else {
+        navbar.classList.remove("transparent");
+      }
     };
 
+    function menuVisibility() {
+      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+        var Menu = document.querySelector('.dropdown .content');
+        if (Menu) {
+          if (Menu.style.display === 'none') {
+            Menu.style.display = 'block';
+          } else {
+            Menu.style.display = 'none';
+          }
+        }
+      }
+    }
 
-  
-
-</script>
+  </script>
 </body>
 
 </html>
