@@ -1,11 +1,14 @@
 * {
   margin: 0%;
   padding: 0;
-box-sizing: border-box;}
+  box-sizing: border-box;
+  font-family: Roboto Slab,serif;
+}
 
 body {
-  background-color: rgb(0, 0, 0)	;
+  background-color: #090808;
   
+  font-family: Roboto Slab,serif;
 }
 
 
@@ -14,12 +17,11 @@ body {
   justify-content: flex-end;
   height: 5vh;
   width: 100%;
-  border: 4px solid red;
 }
 
 #header a {
   padding-top: 20px;
-  color: white;
+  color: #F4F3F2;
   font-size: 25px;
   text-decoration: none;
   margin-right: 2%;
@@ -35,122 +37,140 @@ body {
 
 
 /*-------------------------------------main header code-------------------------------------*/
-.mainHeader{
+.mainHeader {
 
   background-image: url(images/webpage.gif);
   background-size: cover;
-
-
-
-
-
-
-border: 4px solid red;
-width: 100%;
-height: 95vh;
-display:flex;
-flex-direction: column;
-align-items: flex-start;
-justify-content: center;
-flex-wrap: wrap;
-color: white;
+  width: 100%;
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  color:#F4F3F2;
 
 }
 
-.mainHeader h1{
-  color: white;
-  margin-bottom: 20%;
-  margin-left: 7%;
-  border: 4px solid red;
+.mainHeader h1 {
+  color: #F4F3F2;
+  font-size: 4em;
+  font-weight: 400;
+  letter-spacing: 1.6px;
+  line-height: .8;
+  text-align: center;
+  margin: 1%;
 
-  }
-
-  .mainHeader p{
-    border: 4px solid red;
-    color: white;
-    margin-bottom: 1%;
-    margin-left: 7%;
-  }
-
-.mainHeader button{
-cursor: pointer;
-height: 5em;
-width: 7em;
-border-radius: 5em;
-border: none;
-margin-left: 100%;
 }
 
-.mainHeader button:hover{
+.mainHeader p {
+  color: #F4F3F2;
+  font-size: 1em;
+  font-weight: 400;
+  letter-spacing: 1.6px;
+  line-height: .8;
+  text-align: center;
+}
 
+.mainHeader button {
+  border-radius: 15px;
+  cursor: pointer;
+  height: 4em;
+  width: 10em;
+  border: 4px solid #15aabf;
+  background: none;
+  margin-top: 10%;
+
+  color: #15aabf;
+  font-size: 1em;
+  font-weight:400px;
+  letter-spacing: 1.6px;
+  line-height: .8;
+  text-align: center;
+}
+
+.mainHeader button:hover {
   background-color: rgb(80, 80, 82);
- 
-  }
+}
 
 
 
 /*-------------------------------------About code-------------------------------------*/
 
-#About{
+#About {
   width: 100%;
   height: 100vh;
   display: flex;
   flex-direction: row;
-  color:white;
+  color: white;
   background-color: #F4F3F2;
 }
 
-
-#About #picture img{ 
-width: 80%;
-height: auto;
-border-radius: 5px;
+#About #picture img {
+  width: 80%;
+  height: auto;
+  border-radius: 5px;
 }
 
-#picture{
-  border: 4px solid red;
+#picture {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 40%;
-  
 }
 
-#text{
-  border: 4px solid red;
+#text {
   width: 60%;
   height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   padding-left: 50px;
+  color: #555;
 }
+
+#text p{
+  font-size: 1.25em;
+  margin: 1%;
+}
+
+#text h1{
+  font-size: 2em;
+}
+
 /*-------------------------------------Project code-------------------------------------*/
 
 
-#Project{
-width: 100%;
-height:100vh;
-color:white;
-text-align: center;
-background-color: hsla(212, 60%, 10%, 0.904);
-}
-
-
-#ExampleHeader{
-height: 5vh;
-}
-
-#Examples{
+#Project {
   width: 100%;
-  height:75vh;
+  height: 100vh;
+  color: #F4F3F2;
+  text-align: center;
+  background-color: hsla(212, 60%, 10%, 0.904);
+}
+
+
+#ExampleHeader {
+  height: 13vh;
+  font-size: 50px;
+  padding-top: 1%;
+
+}
+
+#ExampleHeader p{
+  font-size: 20px;
+  margin: 1%;
+}
+
+
+#Examples {
+  width: 100%;
+  height: 67vh;
   display: flex;
   align-items: center;
-  justify-content:space-evenly;
+  justify-content: space-evenly;
 }
-
-
-
 
 
 /*---------------------------------------------------pop up------------------------------------------------------------*/
@@ -178,18 +198,38 @@ height: 5vh;
   text-align: center;
   align-items: center;
   justify-content: center;
-  height: 40%;
-  width: 40%;
+  height: 75%;
+  width: 75%;
 }
 
-.popup-container button{
+.popup-container p{
+  color: #F4F3F2;
+  font-size: 30px;
+  letter-spacing: 2px;
+  line-height: 1.5;
+  text-align: center;
+  margin: 1%;
+
+}
+
+.popup-container button {
   margin: 3%;
   height: 15%;
   width: 15%;
+  border-radius: 15px;
   cursor: pointer;
+  height: 4em;
+  width: 10em;
+  border: 4px solid #15aabf;
+  background: none;
+  color: #15aabf;
+  font-size: 1em;
+  font-weight:400px;
+  letter-spacing: 1.6px;
+  line-height: .8;
+  text-align: center;
 
 }
-
 
 
 
@@ -203,224 +243,204 @@ height: 5vh;
   border: none;
   cursor: pointer;
   padding: 0;
-  width: 20%; 
+  width: 20%;
 
 }
 
 .popup-button img {
   width: 100%;
-  height: auto; /* Maintain aspect ratio */
-  border-radius: 5px; /* Optional: Add border-radius for rounded corners */
+  height: auto;
+  border-radius: 5px;
 }
 
 
-
-#ExampleSkills{
+#ExampleSkills {
+  border-bottom: 3px solid #F4F3F2;
   height: 5vh;
+  width: 75%;
+  margin: auto;
+
 }
 
-#Skills{
+#Skills {
   width: 100%;
-  height:15vh;
+  height: 15vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#Skills img{
-  height: 60%;
+#Skills img {
+  height: 50%;
   margin: 3%;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*-------------------------------------Contact code-------------------------------------*/
 
-#Contact{
+#Contact {
   width: 100%;
-  height:100vh;
-  color: white;
-  display:flex;
+  height: 100vh;
+  color: #F4F3F2;
+  display: flex;
   flex-direction: column;
 
-  }
+}
 
 
-  #ContactHeading{
-    width:100%;
-    height:15vh;
-   font-size: 200%;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-  }
+#ContactHeading {
+  width: 100%;
+  height: 15vh;
+  font-size: 200%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 /*----------------------Form css---------------------------*/
-  #ContactForm{
-    width:100%;
-    height:70vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  #ContactForm form{
-    background-color:  #04151d;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;  
-     
-     width: 45%;
-     height: 85%;
+#ContactForm {
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-    border-radius: 15px;
-    color:white;
-  }
+#ContactForm form {
+  background-color: #04151d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 45%;
+  height: 85%;
+  border-radius: 15px;
+  color: #F4F3F2;
+}
 
-  #ContactForm input{
-    border-radius: 5px;
-    width: 50%;
-    height: 7%;
-    border: none;
-    background: none;
-    padding-left: 10px;
-    background-color:  rgb(128, 128, 128,0.1);
+#ContactForm input {
+  border-radius: 5px;
+  width: 50%;
+  height: 7%;
+  border: none;
+  background: none;
+  padding-left: 10px;
+  background-color: rgb(128, 128, 128, 0.1);
 
-  }
+}
 
-  textarea::placeholder {
-    color: white;
-    text-align: center;
-    opacity: .5;
-  }
-  
-  textarea {
-    color: white;
-  }
+textarea::placeholder {
+  color: #F4F3F2;
+  text-align: center;
+  opacity: .5;
+}
 
-  input{
-    color: white;
-  }
-  input::placeholder{
-    color: white;
-    opacity: .5;
+textarea {
+  color: #F4F3F2;
+}
 
-  }
-  #ContactForm textarea{
-    padding: 10px;
-    border-radius: 5px;
-    width: 50%;
-    margin-bottom: 5%;
-    border: none;
-    background: none;
-    background-color:  rgb(128, 128, 128,0.1);
-  }
+input {
+  color: #F4F3F2;
+}
 
+input::placeholder {
+  color: #F4F3F2;
+  opacity: .5;
 
+}
 
-  #ContactForm button{
-     width: 10%;
-    height: 7%;
-    background:none;
-    background-color:  rgb(128, 128, 128,0.5);
-    border: none;
-    cursor: pointer;
-  }
-  #ContactForm button:hover{
-    background-color:  rgb(128, 128, 128);
- }
+#ContactForm textarea {
+  padding: 10px;
+  border-radius: 5px;
+  width: 50%;
+  margin-bottom: 5%;
+  border: none;
+  background: none;
+  background-color: rgb(128, 128, 128, 0.1);
+}
 
 
-  #ContactForm h4{
-   margin: 10px;
-   font-size: 25px;
 
-  }
+#ContactForm button {
+  width: 10%;
+  height: 7%;
+  background: none;
+  background-color: rgb(128, 128, 128, 0.5);
+  border: none;
+  cursor: pointer;
+}
+
+#ContactForm button:hover {
+  background-color: rgb(128, 128, 128);
+}
+
+
+#ContactForm h4 {
+  margin: 10px;
+  font-size: 25px;
+
+}
 
 /*----------------------Footer css---------------------------*/
-  #Footer{
-    width:100%;
-    height:15vh;
+#Footer {
+  width: 100%;
+  height: 15vh;
 
-    display:flex;
-    align-items: center;
-    justify-content: center;
-  }
-  #Footer img{
-    width: 60px;
-    margin: 25px;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-  #Footer a:hover{
-   height: 150%;
+#Footer img {
+  width: 60px;
+  margin: 25px;
+}
 
-  }
+#Footer a:hover {
+  height: 150%;
+
+}
+
 /*--------------------Navigation css------------------------*/
 
-.dropdown{
+.dropdown {
   display: inline-block;
 }
-.dropdown button{
-padding: 10px 15px;
-border: none;
-cursor: pointer;
-appearance: none;
-background-color: inherit;
+
+.dropdown button {
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  appearance: none;
+  background-color: inherit;
 }
 
-.dropdown img{
-height: 25px;
-margin-right: 50px;
+.dropdown img {
+  height: 25px;
+  margin-right: 50px;
 }
 
-.dropdown a{
-display: block;
-color:rgb(255, 255, 255);
-text-decoration: none;
-padding: 10px 15px;
+.dropdown a {
+  display: block;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  padding: 10px 15px;
 }
 
-.dropdown .content{
+.dropdown .content {
   display: none;
   position: absolute;
-  background-color:  rgb(4, 21, 29);
+  background-color: rgb(4, 21, 29);
   box-shadow: 2px 2px 5px black;
   right: 50px;
   border-radius: 10px;
 }
 
-.dropdown:hover .content{
-display: block;
+.dropdown:hover .content {
+  display: block;
 }
 
-.dropdown a:hover{
-  background-color:  rgba(29, 9, 4, 0.5);
+.dropdown a:hover {
+  background-color: rgba(29, 9, 4, 0.5);
 }
 
 .navbar {
@@ -432,15 +452,31 @@ display: block;
   display: none;
 }
 
-.navbar.transparent{
-display: flex;
-justify-content: flex-end;
+.navbar.transparent {
+  display: flex;
+  justify-content: flex-end;
 
 }
 
 /*-------------------Media CSS------------------------*/
 
 
+@media screen and (max-width: 600px) {
+  
+  .popup-container p{
+    color: #F4F3F2;
+    font-size: 15px;
+    letter-spacing: 2px;
+    line-height: 1.5;
+    text-align: center;
+    margin: 1%;
+  }
 
+  #ContactForm form {
+    width: 85%;
+    height: 85%;
+  }
+
+}
 
 
