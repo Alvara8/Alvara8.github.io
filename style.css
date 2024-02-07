@@ -434,13 +434,12 @@ input::placeholder {
   right: 50px;
   border-radius: 10px;
 }
-
 .dropdown:hover .content {
   display: block;
 }
-
 .dropdown a:hover {
-  background-color: rgba(29, 9, 4, 0.5);
+  background-color: rgb(73, 65, 63);
+  border-radius: 10px;
 }
 
 .navbar {
@@ -472,9 +471,46 @@ input::placeholder {
     margin: 1%;
   }
 
+  /*--------------Contact page media-----------------*/
+
   #ContactForm form {
     width: 85%;
     height: 85%;
   }
+
+
+
+
+
+  /*--------------About page media-----------------*/
+
+#text {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-left: 1%;
+}
+
+#text p {
+  font-size: 1.15em;
+  margin: 1%;
+}
+
+#About #picture img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 }
