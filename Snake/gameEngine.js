@@ -3,6 +3,23 @@ var maybe = false;
 var currentDirection;
 var snakeSegment = {}; // Each array segment used to target and change div color.
 
+
+
+
+
+var highscore = parseInt(getCookie("HighScore"), 10) || 0;
+
+
+
+var highScoreBoard = document.getElementById("highScoreBoard");
+
+highScoreBoard.innerText = "High Score: " + highscore;
+
+
+
+
+
+
 snakeSegment.front = true;
 snakeSegment.x = 10;
 snakeSegment.y = 10;
@@ -34,7 +51,7 @@ for (let i = 0; i < 20; i++) {
 
 var startGame = false;
 var score = 0;
-var direction = {x: 0, y: 0}; // Object used to set snake direction
+var direction = { x: 0, y: 0 }; // Object used to set snake direction
 
 generateApple();
 
@@ -51,15 +68,13 @@ function repeat() {
         tempPos.y = snakeArray[0].y;
         apple(tempPos);
 
-        generateApple();
-
         if (startSegment == false) {
             addSegment();
             addSegment();
             startSegment = true;
         }
 
-        for (let i = 0; i < snakeArray.length; i++) {                             
+        for (let i = 0; i < snakeArray.length; i++) {
             board[snakeArray[i].y][snakeArray[i].x].elem.style.backgroundColor = "#142943";
             board[snakeArray[i].y][snakeArray[i].x].tail = false;
             if (snakeArray[i].front == true) {
@@ -97,12 +112,13 @@ function apple(position) {
     if (board[position.y][position.x].apple == true) {
         board[position.y][position.x].elem.style.backgroundColor = "#142943";
         board[position.y][position.x].apple = false;
-        score+=3;
+        score += 3;
         if (score > 100) {
-            if (confirm("You Win!\nWould you like to play again?")) {
+            updateHighScore();
+            if (confirm("High Score " + highscore + "\nYou Win!\nWould you like to play again?")) {
                 location.reload();
             }
-            else{
+            else {
                 window.close();
             }
             clearInterval(id);
@@ -119,29 +135,31 @@ function apple(position) {
 }
 
 function generateApple() {
-    var generated = false;
+    let generated = false;
 
+    // Clear any existing apple indicators
     for (let i = 0; i < 20; i++) {
         for (let j = 0; j < 20; j++) {
-            if (board[i][j].apple == true) {
-                board[i][j].elem.style.backgroundColor = "red";
-
-                generated = true;
+            if (board[i][j].apple) {
+                board[i][j].elem.style.backgroundColor = "";
+                board[i][j].apple = false;
             }
         }
     }
 
-    while (generated == false) {
+    // Generate a new apple in a random position not occupied by the snake
+    while (!generated) {
         let number1 = Math.floor(Math.random() * 20);
         let number2 = Math.floor(Math.random() * 20);
 
-        if (board[number1][number2].tail == false) {
+        if (!board[number1][number2].tail && !board[number1][number2].apple) {
             board[number1][number2].apple = true;
             board[number1][number2].elem.style.backgroundColor = "red";
-            generated = true; 
+            generated = true;
         }
     }
 }
+
 
 function collision(x, y) { // Checks for collisions
     var temp = false;
@@ -159,13 +177,16 @@ function collision(x, y) { // Checks for collisions
         }
     }
     if (temp) {
-        if (confirm("Game is over :/\nWould you like to play again?")) {
+        updateHighScore();
+        if (confirm("High Score " + highscore + "\nGame is over :/\nWould you like to play again?")) {
+            if (highscore > score) {
+                setCookie("highScore", score);
+            }
             location.reload();
         }
-        else{
+        else {
             window.close();
         }
-        
         clearInterval(id);
         return true;
     }
@@ -215,5 +236,36 @@ function handleKeyDown(event) {
         }
     }
 }
-
 document.addEventListener('keydown', handleKeyDown);
+
+
+
+
+function setCookie(name, value) {
+    const date = new Date();
+    date.setFullYear(date.getFullYear() + 100);
+    document.cookie = name + "=" + (value || "") + "; expires=" + date.toUTCString() + "; path=/";
+}
+
+
+function getCookie(name) {
+    const nameEQ = name + "=";
+    const cookies = document.cookie.split(';');
+    for (let i = 0; i < cookies.length; i++) {
+        let c = cookies[i];
+        while (c.charAt(0) === ' ') c = c.substring(1);
+        if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length);
+    }
+    return null;
+}
+
+
+
+function updateHighScore() {
+    if (score > highscore) {
+        highscore = score;
+        setCookie("HighScore", highscore);
+    }
+}
+
+
