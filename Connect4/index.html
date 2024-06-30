@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="images/x-icon" href="../images/ClemsonLogo.png" />
+    <title>Connect4</title>
+    <style>
+
+
+body{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: antiquewhite;
+    height: 100vh;    
+}
+
+        #container {
+            height: 700px;
+            width: 600px;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            position: relative;
+        }
+
+        .slots {
+            width: 100px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(27, 27, 225);
+
+        }
+
+        .tokens {
+            width: 80px;
+            height: 80px;
+            background-color: white;
+            border-radius: 50px;
+        }
+
+        .btn {
+            width: 80px;
+            height: 80px;
+            background-color: white;
+            border-radius: 50px;
+            cursor: pointer;
+            border: none;
+        }
+
+        .tokenPiece {
+            width: 80px;
+            height: 80px;
+            border-radius: 50px;
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            z-index: 1;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="header">
+        <h1 style="text-align: center; color: #F56600;"> Connect Four </h1>
+        <h3 style="text-align: center; color: #F56600;">Choose your colors below</h3>
+
+        <label style=" color: #F56600; font-weight: bolder;">Player 1</label>
+
+        <select name="colors" id="player1"> 
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+            <option value="#522D80">Clemson Purple</option>
+            <option value="#F56600">Clemson Orange</option>
+        </select>
+        <label style="color: #F56600; font-weight: bolder;">Player 2</label>
+        <select name="colors" id="player2" style="margin-bottom: 5%;"> 
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+            <option value="#522D80">Clemson Purple</option>
+            <option value="#F56600">Clemson Orange</option>
+        </select>
+
+    </div>
+
+    <div id="container"> </div>
+
+    <script src="engine.js"></script>
+
+</body>
+
+</html>
