@@ -102,6 +102,9 @@ function apple(position) {
             if (confirm("You Win!\nWould you like to play again?")) {
                 location.reload();
             }
+            else{
+                window.close();
+            }
             clearInterval(id);
         }
 
@@ -159,6 +162,10 @@ function collision(x, y) { // Checks for collisions
         if (confirm("Game is over :/\nWould you like to play again?")) {
             location.reload();
         }
+        else{
+            window.close();
+        }
+        
         clearInterval(id);
         return true;
     }
