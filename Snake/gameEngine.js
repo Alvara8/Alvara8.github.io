@@ -3,22 +3,11 @@ var maybe = false;
 var currentDirection;
 var snakeSegment = {}; // Each array segment used to target and change div color.
 
-
-
-
-
 var highscore = parseInt(getCookie("HighScore"), 10) || 0;
-
-
 
 var highScoreBoard = document.getElementById("highScoreBoard");
 
 highScoreBoard.innerText = "High Score: " + highscore;
-
-
-
-
-
 
 snakeSegment.front = true;
 snakeSegment.x = 10;
@@ -115,7 +104,7 @@ function apple(position) {
         score += 3;
         if (score > 100) {
             updateHighScore();
-            if (confirm("High Score " + highscore + "\nYou Win!\nWould you like to play again?")) {
+            if (confirm("High Score " + highscore + "\nYou Win! :)\nWould you like to play again?")) {
                 location.reload();
             }
             else {
@@ -239,8 +228,6 @@ function handleKeyDown(event) {
 document.addEventListener('keydown', handleKeyDown);
 
 
-
-
 function setCookie(name, value) {
     const date = new Date();
     date.setFullYear(date.getFullYear() + 100);
@@ -258,7 +245,6 @@ function getCookie(name) {
     }
     return null;
 }
-
 
 
 function updateHighScore() {
