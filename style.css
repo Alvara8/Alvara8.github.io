@@ -518,8 +518,8 @@ input::placeholder {
 
 
 
-#UIProjects h2{
-margin-top: 10px;  
+#UIProjects h2 {
+  margin-top: 10px;
 }
 
 #UIProjects ul {
@@ -528,8 +528,8 @@ margin-top: 10px;
   flex-wrap: wrap;
   list-style-type: none;
   justify-content: center;
-  align-items:start;
-  gap:15px;
+  align-items: start;
+  gap: 10%;
 
 }
 
