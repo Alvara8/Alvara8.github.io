@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Length extension attack</title>
+    <link rel="icon" type="images/x-icon" href="../images/ClemsonLogo.png" />
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0%;
+            padding: 0;
+            background-color: #FFF2E1;
+            text-align: center;
+        }
+
+
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 15px;
+            margin: 50px auto;
+            width: 30%;
+            height: 400px;
+            border: 2px solid red;
+        }
+
+
+        input {
+
+            width: 75%;
+        }
+
+
+
+
+
+        button {
+            margin: 50px;
+            cursor: pointer;
+            background-color: #FFF2E1;
+            height: 50px;
+            width: 150px;
+            border-radius: 10px;
+            font-size: larger;
+            box-shadow: 3px 3px 3px #FFF2E1;
+        }
+
+        button:hover {
+            background-color: #e2d8c9;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align: center; color: #6d6151; margin-top: 30px; margin-bottom: 50px;">welcome to Length extension
+        attack utility!</h1>
+    <h3 style="text-align: center; color: #6d6151;">This tool is for educational purposes only</h3>
+
+
+
+    <form onsubmit="getNewURl(event)">
+        <div class="userInput">
+            <label>Enter URl</label>
+            <input id="inputUrl" type="text" autocomplete="off">
+        </div>
+
+        <div class="userInput">
+            <label>Enter key Length</label>
+            <input id="inputLength" type="text" autocomplete="off">
+        </div>
+        <button>Submit</button>
+    </form>
+
+    <script>
+
+        function getNewURl(event) {
+
+            event.preventDefault();
+
+
+            var url = 'http://cpsc4200.mpese.com/alvara8/lengthextension/api?token=920942ac608635c200076e1b7669c70b74e7fcf4b8711efbea917498c0150e85&command=SprinklersPowerOn';
+            //const url = 'http://localhost:8000/attack/';
+
+
+           // var secretLength = document.getElementById("inputLength").value;
+
+           var secretLength = 8
+
+           // var url = document.getElementById("inputUrl").value;
+
+
+
+
+
+            fetch('http://localhost:8000/attack/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ url: url, secret:secretLength })
+            })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();  // Convert the response to JSON
+                })
+                .then(data => {
+                    console.log(data);
+                })
+                .catch(error => {
+                    console.error('There was a problem with the fetch operation:', error);
+                });
+
+
+
+
+
+
+
+
+
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
